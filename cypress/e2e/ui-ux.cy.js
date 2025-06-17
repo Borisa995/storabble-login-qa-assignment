@@ -1,6 +1,6 @@
-beforeEach('Login tests', () => {
+describe('Login tests', () => {
      it('TC09: Toggle password visibility using "eye" icon', () => {
-  cy.visit('https://st.storabble.etondigital.com/en/login', {
+  cy.visit('/login', {
     auth: {
       username: Cypress.env('BASIC_AUTH_USER'),
       password: Cypress.env('BASIC_AUTH_PASS')

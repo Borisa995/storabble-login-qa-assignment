@@ -1,5 +1,5 @@
 describe('Login tests', () => {
-  it('TC01 valid login', () => {
+  it('TC01 Valid login with registered user', () => {
     cy.visit('/login', {
       auth: {
         username: Cypress.env('BASIC_AUTH_USER'),
