@@ -1,0 +1,23 @@
+{
+  "name": "storabble-login-qa-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Borisa995/storabble-login-qa-assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Borisa995/storabble-login-qa-assignment/issues"
+  },
+  "homepage": "https://github.com/Borisa995/storabble-login-qa-assignment#readme",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.4.1"
+  }
+}
