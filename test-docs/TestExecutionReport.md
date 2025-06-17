@@ -19,7 +19,7 @@ Manual testing was performed on the login functionality to check how the system 
 | TC01    | Login with valid credentials                  | Positive     |  PASS |                                              |
 | TC02    | Login with incorrect password                 | Negative     |  PASS |                                              |
 | TC03    | Email format validation                       | Negative     |  PASS |                                              |
-| TC04    | Submit with both fields empty                 | Negative        PASS |                                              |
+| TC04    | Submit with both fields empty                 | Negative     |   PASS |                                              |
 | TC05    | Toggle password visibility                    | UI/UX        |  PASS |                                              |
 | TC06    | Forgot password link redirects correctly      | Functional   |  PASS |                                              |
 | TC06a   | Missing '@' in email                          | Negative     |  PASS |                                              |
