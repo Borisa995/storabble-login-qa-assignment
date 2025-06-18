@@ -21,10 +21,9 @@ describe('Login tests', () => {
     cy.contains('Please enter a valid email address').should('be.visible');
     cy.contains('Your password is incorrect').should('be.visible');
 
-    // Ignoriši uncaught exception (ako postoji 401 ili unauthorized error u JS-u)
     Cypress.on('uncaught:exception', (err, runnable) => {
       if (err.message.includes('401') || err.message.includes('Unauthorized')) {
-        return false; // sprečava fail testa
+        return false;
       }
     });
   });
@@ -37,12 +36,10 @@ describe('Login tests', () => {
     cy.contains('Please enter a valid email').should('be.visible');
   });
 
-});
-  
-
- /*it('TC07: Login atempt with empty email and password input fields', () => {
+it('TC07: Login atempt with empty email and password input fields', () => {
     cy.get('button[type="submit"]').click();
     cy.contains('This field is required').should('be.visible');~
     cy.contains('This field is required').should('be.visible');
 
-   });*/
+});
+ });

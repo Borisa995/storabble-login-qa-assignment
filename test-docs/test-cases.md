@@ -566,6 +566,43 @@ Verify that when a password shorter than the required length is entered, and the
 - Below the emaik input field, the message "Please enter a valid email address." is displayed.
 - No redirection occurs.
 
+---
+
+## TC19: Verify that brute-force protection is implemented on login
+
+**Type:** Security / Negative  
+**Severity:** High  
+**Priority:** High  
+**Status:** Not Applicable
+
+**Description:**  
+Verify that the system detects and prevents brute-force login attempts after multiple consecutive failed attempts using incorrect credentials.
+
+**Preconditions:**  
+- User `vodav76919@ihnpo.com` is registered  
+- Correct password is `Testiranje1`  
+- The user is logged out  
+- The login page is accessible at: `https://st.storabble.etondigital.com/en/login`  
+
+**Test Data:**
+- Email: `randomvalidemail32@yopmail.com`  
+- Password: `Test1234!`
+
+**Test Steps:**
+1. Open Chrome and navigate to the login page `https://st.storabble.etondigital.com/en/login`
+2. Enter the incorrect email `randomvalidemail32@yopmail.com` in the email input field.
+3. Enter the incorrect password `Test1234!` in the password input field.
+4. Click the  "Login" button.  
+3. Repeat the login attempt 10 or more times within a short time (e.g., under 2 minutes).  
+4. Observe any changes or triggered protection features.
+
+**Expected Result:**  
+- The application should block any new attempts after a some number of failed logins (e.g., 5–10).  
+- A lockout message should appear or a CAPTCHA should be displayed.  
+- Server may return a "Too Many Requests" or similar response.  
+- If no protection is triggered, this is considered a security risk and should be reported as a recommendation.
+
+
 
 
 
