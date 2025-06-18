@@ -88,17 +88,17 @@ Test summary is in the `test-summary.md` file and includes:
 
 - To try out the automated tests written for the login page, follow these steps to get everything up and running.
 
-Before you start, make sure you have: Node.js installed and npm
+- Before you start, make sure you have: Node.js installed and npm
 - To check, you can run:
-    node -v
-    npm -v
+ - node -v
+ - npm -v
 
 1. Install dependencies:
-npm install
+ - npm install
 
 2. Run Cypress tests:
 Open Cypress Test Runner (interactive mode)
-npx cypress open
+ - npx cypress open
 
 This will open the Cypress UI. When you select the e2e test and redirects to the browser you will se the test files:
 
@@ -110,5 +110,9 @@ This will open the Cypress UI. When you select the e2e test and redirects to the
 Click on any of them to start the tests.
 
 For example:
-Click on login.cy.js to run test that cover a successful login flow with valid credentials.
+Click on `login.cy.js` to run test that cover a successful login flow with valid credentials.
 
+---
+
+**Author:** Borisa Vuckovic 
+**Date:** 18.06.2025.
