@@ -118,6 +118,5 @@ For example:
 Click on `login.cy.js` to run test that cover a successful login flow with valid credentials.
 
 ---
-
 **Author:** Borisa Vuckovic 
 **Date:** 18.06.2025.
