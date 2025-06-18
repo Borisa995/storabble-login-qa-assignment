@@ -57,12 +57,12 @@ Test data includes:
 
 ## 8. Test Types Covered
 
-|Type	        |Description|
----------------------------------------------------------------
-|Functional	  | Core login logic, field validation.           |
-|Negative	    | Invalid email, wrong credentials, empty fields|
-|UI/UX	      | Button behavior, password visibility toggle.  |
-|Security  	  | SQL injection, brute-force protection.        |
+| Type	        | Description                                   |
+|---------------|-----------------------------------------------|
+| Functional	  | Core login logic, field validation.           |
+| Negative	    | Invalid email, wrong credentials, empty fields|
+| UI/UX	        | Button behavior, password visibility toggle.  |
+| Security  	  | SQL injection, brute-force protection.        |
 
 ## 9. Entry & Exit Criteria
 
