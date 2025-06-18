@@ -7,26 +7,21 @@ This repository contains a complete test suite for the login functionality, incl
 **Project Structure**
 
 Storabble-login-qa-assignment/
-│
 ├── cypress/
-│   ├── e2e/                   # Contains 3 Cypress test files for login scenarios
-│   ├── fixtures/              # Includes example test data (example.json)
-│   ├── screenshots/           # (Empty or used for Cypress screenshot captures)
-│   └── support/               # Cypress support files (commands.js, e2e.js)
-│
-├── node/
-│ 
-│── test-docs/
-│       ├
-│       ├── screenshots/              # One image (e.g. for documentation/reporting)
-│       ├── test_cases.md             # 19 manually written test cases
-│       ├── test_plan.md              # Detailed test plan
-│       └── test_execution_report.md  # Summary of manual and automated test results
-│
-├── cypress.config.js          # Cypress configuration file
-├── package.json               # Node project dependencies and scripts
-├── package-lock.json          # Lock file for consistent dependency versions
-└── README.md                  # This file
+│ ├── e2e/ # Contains 5 Cypress test files for login scenarios
+│ ├── fixtures/ # Example test data (example.json)
+│ ├── screenshots/ # Screenshots from Cypress test runs (may be empty)
+│ └── support/ # Cypress support files (commands.js, e2e.js)
+├── node/ # Node-related files
+├── test-docs/
+│ ├── screenshots/ # Images for documentation or reporting
+│ ├── test_cases.md # 19 manually written test cases for login page
+│ ├── test_plan.md # Detailed test plan document
+│ └── test_execution_report.md # Summary of manual and automated test results
+├── cypress.config.js # Cypress configuration file
+├── package.json # Node.js project dependencies and scripts
+├── package-lock.json # Dependency lock file
+└── README.md # This file
 
 ---
 
