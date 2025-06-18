@@ -1,12 +1,12 @@
 # Test Plan – Login Functionality
 
 ## 1. Overview
-This test plan defines the approach and scope for testing the login functionality of the application. The main goal is to ensure that the login process behaves as expected under various input scenarios, covering form validation, UI behavior, and basic security aspects.
+This test plan defines the approach and scope for testing the login functionality of the application. The main goal is to ensure that the login process behaves as expected under various input scenarios, covering form validation, UI behavior and basic security aspects.
 
 
 ## 2. Objective
 - Ensure that users can log in using valid credentials
-- Validate input fields (email, password) for required, formatting, and case-sensitivity
+- Validate required input fields (email, password), formatting, and case sensitivity
 - Confirm appropriate error handling and generic messaging
 - Validate usability features (disabled login, toggle visibility)
 - Assess basic security and accessibility aspects of the login page
@@ -34,11 +34,11 @@ Automated Testing:
 ## 6. Test Data
 Test data includes:
 
-Valid and invalid email formats
-Valid and incorrect passwords
-Inputs with special characters
-Empty input fields
-SQL injection strings (e.g. ' OR 1=1 --)
+- Valid and invalid email formats
+- Valid and incorrect passwords
+- Inputs with special characters
+- Empty input fields
+- SQL injection strings (e.g. ' OR 1=1 --)
 
 
 ## 7. Test Environment and tools
@@ -57,11 +57,12 @@ SQL injection strings (e.g. ' OR 1=1 --)
 
 ## 8. Test Types Covered
 
-Type:	    Description:
-Functional	Core login logic, field validation
-Negative	Invalid email, wrong credentials, empty fields
-UI/UX	    Button behavior, password visibility toggle
-Security	SQL injection, brute-force protection
+|Type	        |Description|
+---------------------------------------------------------------
+|Functional	  | Core login logic, field validation.           |
+|Negative	    | Invalid email, wrong credentials, empty fields|
+|UI/UX	      | Button behavior, password visibility toggle.  |
+|Security  	  | SQL injection, brute-force protection.        |
 
 ## 9. Entry & Exit Criteria
 

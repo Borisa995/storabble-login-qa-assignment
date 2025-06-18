@@ -3,15 +3,15 @@
 ## 1. Overview
 Manual testing was carried out on the login feature to see how the system responds to different types of input — both correct and incorrect. The main focus was to make sure that logging in works as expected, error messages show up where they should, and the overall user experience is smooth. Some basic security checks were also included, like input validation and handling of potentially unsafe entries.
 
-Test coverage included:
+**Test coverage included**
 
-Successful login with valid credentials.
-Handling of incorrect passwords and invalid email formats.
-Input validation for empty fields and character length boundaries.
-Functionality of the password visibility toggle.
-Security input handling, such as SQL injection attempts and Brute-force protection.
-In total, 19 test cases were executed. Most of the test cases passed successfully. Two test cases were marked as Not Applicable and logged as a recommendation for UX and security improvement. 
-Additionally, a UI-related bug was discovered during exploratory testing, outside of scripted test cases.
+- Successful login with valid credentials.
+- Handling of incorrect passwords and invalid email formats.
+- Input validation for empty fields and character length boundaries.
+- Functionality of the password visibility toggle.
+- Security input handling, such as SQL injection attempts and Brute-force protection.
+- In total, 19 test cases were executed. Most of the test cases passed successfully. Two test cases were marked as Not Applicable and logged as a recommendation for UX and security improvement. 
+- Additionally, a UI-related bug was discovered during exploratory testing, outside of scripted test cases.
 
 ## 2. Test Environment
 - **OS:** macOS 
@@ -28,23 +28,23 @@ Additionally, a UI-related bug was discovered during exploratory testing, outsid
 |---------|---------------------------------------------------------------------|----------------------|--------|---------------------------------------------|
 | TC01    | Valid login with registered user                                    | Functional/Positive  |  PASS |                                              |
 | TC02    | Login attempt with incorrect password                               | Functional/Negative  |  PASS |                                              |
-| TC03    | Login attempt with invalid email format - without "@" Symbol        | Functional/Negative  |  PASS |                                              |
-| TC04    | Login attempt with invalid email format - without domain Name       | Functional/Negative  |  PASS |                                              |
+| TC03    | Login attempt with invalid email format - without "@" symbol        | Functional/Negative  |  PASS |                                              |
+| TC04    | Login attempt with invalid email format - without domain name       | Functional/Negative  |  PASS |                                              |
 | TC05    | Login attempt with invalid email format - without username          | Functional/Negative  |  PASS |                                              |
 | TC06    | Login attempt with invalid email format - with invalid characters   | Functional/Negative  |  PASS |                                              |
 | TC07    | Login atempt with empty email and password input fields             | Functional/Negative  |  PASS |                                              |
 | TC08    | Login attempt with unregistered email adress                        | Functional/Negative  |  PASS |                                              |
-| TC09    | Toggle password visibility using "eye" icon                         | UI/UX/Functional     |  PASS |                                              |
+| TC09    | Toggle password visibility using the "eye" icon                     | UI/UX/Functional     |  PASS |                                              |
 | TC10    | Forgot password link                                                | Functional/Navigation|  PASS |                                              |
-| TC11    | Login atempt with only email input field filled                     | Functional/Negative  |  PASS |                                              |
-| TC12    | Login atempt with only password input field filled                  | Functional/Negative  |  PASS |                                              |
-| TC13    | Login button remains disabled until required fields are filled      | Functional/Usability |  N/A  | Not implemented – UX suggestion             |
+| TC11    | Login atempt with only email input field populated                  | Functional/Negative  |  PASS |                                              |
+| TC12    | Login atempt with only password input field populated               | Functional/Negative  |  PASS |                                              |
+| TC13    | Login button remains disabled until required fields are filled      | Functional/Usability |  N/A  | Not implemented – UX suggestion              |
 | TC14    | Verify SQL Injection is not possible in login form                  | Security/Negative    |  PASS |                                              |
 | TC15    | Case sensitivity of email input field                               | Functional/Usability |  PASS |                                              |
 | TC16    | Verify that password is case-sensitive during login validation      | Functional/Security  |  PASS |                                              |
 | TC17    | Visual Feedback on Invalid Login                                    | UI/UX                |  PASS |                                              |
 | TC18    | Login attempt with short password (no character length validation)  | Security/Negative    |  PASS |                                              |
-| TC19    | Brute-force protection                                              | Security/Negative    |  N/A  | Not implemented – suggested as improvement   |  
+| TC19    | Brute-force protection                                              | Security/Negative    |  N/A  | Not implemented – suggested as an improvement|  
 ---
 
 ## 4. Automated Test Case Results (Cypress)
@@ -77,14 +77,14 @@ Automated tests currently cover main positive and negative flows. Manual testing
 
 | Bug ID   | Title                                                | Severity | Priority | Status | Found During          |
 |----------|------------------------------------------------------|----------|----------|--------|-----------------------|
-| UI-001   | Password text overlaps with visibility icon (eye)    | Medium   | Medium   | Open   | Exploratory testing   |
+| UI-001   | Password text overlaps with visibility icon ("eye")  | Medium   | Medium   | Open | Exploratory testing     |
 
 This issue was found during unscripted, manual exploratory testing, outside of predefined test cases.
 
-## Bug Report: UI-001 – Password text overlaps with visibility icon (eye)
+## Bug Report: UI-001 – Password text overlaps with visibility icon ("eye")
 
 **Summary:**  
-When a user enters a long password into the login input field, the password characters begin to overlap with the eye icon used for toggling visibility. This causes readability issues, especially when the visibility is toggled on.
+When a user enters a long password into the login input field, the password characters begin to overlap with the "eye" icon used for toggling visibility. This causes readability issues, especially when the visibility is toggled on.
 
 **Steps to Reproduce:**  
 1. Navigate to the login page: `https://st.storabble.etondigital.com/en/login`  
@@ -94,7 +94,7 @@ When a user enters a long password into the login input field, the password char
 4. Click on the "eye" toggle visability icon to see full overlap.
 
 **Expected Result:**  
-Password characters should not visually overlaps with the eye icon regardless of length.
+Password characters should not visually overlap with the "eye" icon regardless of length.
 
 **Actual Result:**  
 The eye icon partially covers the password input characters when a long password is entered.
@@ -115,7 +115,7 @@ The login feature is stable across both manual and automated tests. Automated te
 All main login scenarios work as expected. Input validation behaves correctly, error messages are clear. Basic security checks (like SQL injection protection) are in place.
 
 One minor UI issue was found and logged, and two missing features (brute-force protection and login button behavior) were noted as usability/security recommendations.
-Also as recommendation is to consider showing a single generic message for login feedback consistency when the user does not provide valid password
+Also, recommendation is to consider showing a single generic message for login feedback consistency when the user does not provide valid password
 
 ---
 

@@ -66,7 +66,7 @@ Verify that the system displays the correct error message when a valid email is 
 
 ---
 
-## TC03 – Login attempt with invalid email format - without "@" Symbol
+## TC03 – Login attempt with invalid email format - without "@" symbol
 
 **Type:** Functional / Negative / Validation  
 **Severity:** Medium  
@@ -98,7 +98,7 @@ Verify that the system detects and rejects an email string that does not contain
 
 ---
 
-## TC04 – Login attempt with invalid email format - without domain Name
+## TC04 – Login attempt with invalid email format - without domain name
 
 **Type:** Functional / Negative / Validation  
 **Severity:** Medium  
@@ -170,7 +170,7 @@ Verify that the system detects and handles an invalid email address without user
 **Status:** Pass
 
 **Description:**  
-Verify that the system correctly detects and rejects invalid email formats by showing an appropriate validation error, without attempting to submit the form.
+Verify that the system detects and rejects invalid email formats correctly by showing an appropriate validation error, without attempting to submit the form.
 
 **Preconditions:**  
 - No existing user account is required.  
@@ -215,7 +215,7 @@ Verify that login fails when email and password input fields are left empty.
 **Expected Result:**  
 - The form is not submitted 
 - The user remains on the login page.
-- Below the email input field, the message "This field is required" is displayed,
+- Below the email input field the message "This field is required" is displayed.
 - Below the password input field the message "This field is required" is displayed. 
 
 ---
@@ -253,7 +253,7 @@ Verify that the system displays an appropriate error message when a user attempt
 
 ---
 
-## TC09: Toggle password visibility using "eye" icon
+## TC09: Toggle password visibility using the 'eye' icon
 
 **Type:** Functional / Usability  
 **Severity:** Low  
@@ -261,11 +261,11 @@ Verify that the system displays an appropriate error message when a user attempt
 **Status:** Pass
 
 **Description:**  
-Verify that the user can toggle the visibility of the password input using the "eye" icon next to the password field.
+Verify that the user can toggle visibility of the password input using the "eye" icon next to the password field.
 
 **Preconditions:**  
 - The login page is accessible at: `https://st.storabble.etondigital.com/en/login`
-- A password input field is present with an "eye" icon for visibility toggle.   
+- A password input field is displayed with an "eye" icon for visibility toggle.   
 
 **Test Steps:**
 1. Open Chrome and navigate to the login page `https://st.storabble.etondigital.com/en/login`.
@@ -289,12 +289,12 @@ Verify that the user can toggle the visibility of the password input using the "
 ## TC10: Forgot password link
 
 **Type:** Functional / Navigation  
-**Severity:** Low  
+**Severity:** Medium  
 **Priority:** Medium  
 **Status:** Pass 
 
 **Description:**  
-Verify that "Forgot password" link redirects the user to reset password page.
+Verify that "Forgot password" link redirects the user to the reset password page.
 
 **Preconditions:**  
 - The login page is accessible at: `https://st.storabble.etondigital.com/en/login`
@@ -311,7 +311,7 @@ Verify that "Forgot password" link redirects the user to reset password page.
 
 ---
 
-## TC11: Login atempt with only email input field filled
+## TC11: Login atempt with only email input field populated
 
 **Type:** Functional / Negative  
 **Severity:** Medium  
@@ -323,7 +323,7 @@ Verify the system behavior when the user attempts to log in with only the email 
 
 **Preconditions:**  
 - The login page is accessible at: `https://st.storabble.etondigital.com/en/login`
-- Valid email requred
+- Valid email required.
 - No existing user account is required. 
 
 **Test Data:**  
@@ -337,9 +337,9 @@ Verify the system behavior when the user attempts to log in with only the email 
 
 **Expected Result:**  
 - The message is displayed below password input field: "This field is required."
-- The user remains on login page.
+- The user remains on the login page.
 
-## TC12: Login atempt with only password input field filled
+## TC12: Login atempt with only password input field populated
 
 **Type:** Functional / Negative  
 **Severity:** Medium  
@@ -563,7 +563,7 @@ Verify that when a password shorter than the required length is entered, and the
 **Expected Result:**  
 - The user remains on the login page.
 - Below the password input field, the message "Your password is incorrect" is displayed.
-- Below the emaik input field, the message "Please enter a valid email address." is displayed.
+- Below the email input field, the message "Please enter a valid email address." is displayed.
 - No redirection occurs.
 
 ---
@@ -593,12 +593,12 @@ Verify that the system detects and prevents brute-force login attempts after mul
 2. Enter the incorrect email `randomvalidemail32@yopmail.com` in the email input field.
 3. Enter the incorrect password `Test1234!` in the password input field.
 4. Click the  "Login" button.  
-3. Repeat the login attempt 10 or more times within a short time (e.g., under 2 minutes).  
+3. Repeat the login attempt 10 or more times within a short period of time (e.g., under 2 minutes).  
 4. Observe any changes or triggered protection features.
 
 **Expected Result:**  
 - The application should block any new attempts after a some number of failed logins (e.g., 5–10).  
 - A lockout message should appear or a CAPTCHA should be displayed.  
-- Server may return a "Too Many Requests" or similar response.  
+- Server may return a "Too Many Requests" or a similar response.  
 - If no protection is triggered, this is considered a security risk and should be reported as a recommendation.
 
