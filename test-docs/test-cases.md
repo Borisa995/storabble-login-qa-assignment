@@ -602,7 +602,3 @@ Verify that the system detects and prevents brute-force login attempts after mul
 - Server may return a "Too Many Requests" or similar response.  
 - If no protection is triggered, this is considered a security risk and should be reported as a recommendation.
 
-
-
-
-
